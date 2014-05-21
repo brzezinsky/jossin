@@ -17,18 +17,17 @@ if (!$user->signed) {
     $result = mysql_query("SELECT * FROM content")
     or die(mysql_error());
     echo "<div class='container'>";
-    echo "<table border='1' cellpadding='10'>";
+    echo "<table class='table table-striped'>";
     echo "<tr> <th>Content id</th> <th>Content name</th> <th>Content text</th> <th></th></tr>";
 
     // loop through results of database query, displaying them in the table
     while ($row = mysql_fetch_array($result)) {
 
-        // echo out the contents of each row into a table
         echo "<tr>";
-        echo '<td>' . $row['content_id'] . '</td>';
+        echo '<td class=\'col-sm-1\'>' . $row['content_id'] . '</td>';
         echo '<td>' . $row['content_name'] . '</td>';
         echo '<td>' . $row['content_text'] . '</td>';
-        echo '<td><a href="edit.php?id=' . $row['content_id'] . '">Edit</a></td>';
+        echo '<td><a class="btn btn-primary" href="edit.php?id=' . $row['content_id'] . '">Edit</a></td>';
         echo "</tr>";
     }
 

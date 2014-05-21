@@ -4,6 +4,14 @@
 <!-- Bootstrap core CSS -->
 <link href="/jossin_git/css/bootstrap.css" rel="stylesheet"/>
 
+<script src="js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea",
+	height : 300
+ });
+</script>
+
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>

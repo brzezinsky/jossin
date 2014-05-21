@@ -19,15 +19,33 @@ if (!$user->signed) {
         <div class="container">
             <form action="" method="post">
                 <input type="hidden" name="id" value="<?php echo $content_id; ?>"/>
-
-                <div>
-                    <p><strong>Content id:</strong><?php echo $content_id; ?></p>
-                    <strong>Content name:</strong><?php echo $content_name; ?><br/>
-                    <strong>Content text: *</strong> <textarea
-                        name="content_text"><?php echo $content_text; ?></textarea><br/>a
-                    <p>* Required</p>
-                    <input type="submit" name="submit" value="Submit">
-                </div>
+				<table class="table table-striped">
+				<tr>
+                    <td>
+					<strong>Content id:</strong>
+					</td>
+					<td><?php echo $content_id; ?>
+					</td>
+				</tr>
+                <tr>
+				    <td>
+					<strong>Content name:</strong>
+					</td>
+					<td>
+					<?php echo $content_name; ?>
+					</td>
+				</tr>	
+				<tr>
+                    <td>
+					<strong>Content text: *</strong>
+				    </td>
+					<td>
+					<textarea name="content_text"><?php echo $content_text; ?></textarea>
+					</td>
+				</tr>
+				</table>
+				<p>* Required</p>
+               <input type="submit" name="submit" value="Submit" class="btn btn-large btn-success">
             </form>
         </div>
         </body>

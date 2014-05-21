@@ -2,6 +2,7 @@
 <html lang="en">
 
 <?php include("include/header.php") ?>
+<?php include("functions.php") ?>
 
 <body>
 
@@ -28,8 +29,7 @@
             <div class="inner cover">
                 <h1 class="cover-heading">Home page.</h1>
 
-                <p class="lead">Cover is a one-pag template for building simple and beautiful home pages. Download, edit
-                    the text, and add your own fullscreen background photo to make it your own.</p>
+                <p class="lead"><? getContent("HomePageDescription"); ?></p>
 
                 <p class="lead">
                     <a href="#" class="btn btn-lg btn-default">Learn more</a>
